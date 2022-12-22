@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'BLACKJAR';
+    src: url(../font/BLACKJAR.TTF) format('truetype');
+}
+
+/* reset */
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #000;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+}
+
+/* header */
+
+.header {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+}
+.header > div > h1 {
+    font-family: 'BLACKJAR';
+    font-size: 40px;
+    text-align: center;
+}
+.nav {
+    display: flex;
+    margin-top: 20px;
+}
+.nav > li:nth-child(n+1):nth-child(-n+4) {
+    margin-right: 70px;
+}
+.nav > li:nth-child(5) {
+    margin-left: auto;
+}
+.nav > li:last-child {
+    margin-left: 70px;
+}
+hr {
+    width: 100%;
+    margin: 10px;
+}
+
+/* section */
+
+.section {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+}
+.section_header {
+    text-align: center;
+    margin: 60px 0 80px;
+}
+.section_header span:first-child {
+    font-family: 'BLACKJAR';
+    font-size: 40px;
+}
+.button1 {
+    display: inline-block;
+    font-size: 24px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #b1b1b1;
+    box-shadow: 3px 3px 3px rgb(0,0,0,0.5);
+    padding: 0 40px;
+    margin: 40px 0 20px;
+    transition: 0.3s;
+}
+.button1:hover {
+    box-shadow: none;
+    margin: 40px 0 20px 5px;
+}
+.section_header div {
+    text-decoration: underline;
+}
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.contents1 {
+    position : relative;
+    float: right;
+    top: -275px;
+    left: 40px;
+    font-size: 24px;
+    margin-right: 200px;
+}
+.contents2, .contents4 {
+    position : relative;
+    float: left;
+    top: 65px;
+    left: 150px;
+    font-size: 24px;
+    text-align: right;
+}
+.contents3 {
+    position : relative;
+    float: right;
+    top: -275px;
+    left: 55px;
+    font-size: 24px;
+    margin-right: 200px;
+}
+.button2 {
+    text-align: center;
+    margin: 160px 0 80px;
+}
+.button2 span {
+    font-size: 24px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #b1b1b1;
+    box-shadow: 3px 3px 3px rgb(0,0,0,0.5);
+    padding: 0 40px;
+    transition: 0.3s;
+}
+.button2 span:hover {
+    box-shadow: none;
+    margin: 5px 0 0 5px;
+}
+.imac img {
+    width: 300px;
+    height: 330px;
+}
+
+/* imac_odd */
+
+.imac_odd {
+    max-width: 400px;
+    margin: 0 0 100px 110px;
+}
+.imac_odd img {
+    position: absolute;
+    width: 400px;
+    height: 330px;
+}
+.screen_odd {
+    position: relative;
+    width: 99%;
+    border-radius: 4% 4% 0 0;
+    background: #000;
+    margin-left: 1px;
+}
+.screen_odd:before {
+    display: block;
+    content: "";
+    padding-top: 60%;
+}
+.viewport_odd {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: #333;
+    margin: 4%;
+}
+.imac_odd .viewport_odd {
+    background-position: 0 0;
+    background-size: 100% auto;
+    transition: background-position 3s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+.imac_odd:hover .viewport_odd {
+    background-position: 0 100%;
+}
+.imac_odd .viewport_odd:after {
+    position: absolute;
+    content: "";
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent);
+}
+
+/* imac_even */
+
+.imac_even {
+    max-width: 400px;
+    margin: 10% 0 10% 56%;
+}
+.imac_even img {
+    position: absolute;
+    width: 400px;
+    height: 330px;
+}
+.screen_even {
+    position: relative;
+    width: 99%;
+    border-radius: 4% 4% 0 0;
+    background: #000;
+    margin-left: 1px;
+}
+.screen_even:before {
+    display: block;
+    content: "";
+    padding-top: 60%;
+}
+.viewport_even {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: #333;
+    margin: 4%;
+}
+.imac_even .viewport_even {
+    transition: background-position 3s ease;
+    background-position: 0 0;
+    background-size: 100% auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+.imac_even:hover .viewport_even {
+    background-position: 0 100%;
+}
+.imac_even .viewport_even:after {
+    position: absolute;
+    content: "";
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent);
+}
+
+/* footer */
+
+.footer {
+    text-align: center;
+    line-height: 150px;
+    width: 100%;
+    height: 150px;
+    background-color: #b1b1b1;
+    margin-top: 100px;
+}

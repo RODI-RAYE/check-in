@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'BLACKJAR';
+    src: url(../font/BLACKJAR.TTF) format('truetype');
+}
+
+/* reset */
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #000;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+}
+
+body {
+    background: #CBC0D3;
+}
+
+/* box styling */
+
+.container {
+    width: 650px;
+    height: 550px;
+    margin: auto;
+}
+.wrap {
+    position: absolute;
+    top: 25%;
+    width: 650px;
+    height: 415px;
+    border-radius: 5px;
+    background: #f6f6f6;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+}
+.pinkbox_left {
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    width: 320px;
+    height: 500px;
+    border-radius: 5px;
+    background: #EAC7CC;
+    box-shadow: 2px 0 10px rgba(0,0,0,.1);
+}
+.pinkbox_right {
+    position: absolute;
+    top: -10%;
+    right: 5%;
+    width: 320px;
+    height: 500px;
+    border-radius: 5px;
+    background: #EAC7CC;
+    box-shadow: 2px 0 10px rgba(0,0,0,.1);
+}
+.leftbox, .rightbox {
+    position: absolute;
+    width: 50%;
+}
+.leftbox {
+    left: -2%;
+}
+.rightbox {
+    right: -2%;
+}
+
+/* font & button styling */
+
+h1 {
+    font-size: 2em;
+    color: #f6f6f6;
+    letter-spacing: 8px;
+    text-align: center;
+    margin-top: 70px;
+}
+.title {
+    font-family: 'BLACKJAR';
+    font-size: 40px;
+    color: #8E9AAF;
+    text-align: center;
+    margin-top: 20%;
+}
+.flower {
+    position: absolute;
+    top: 40%;
+    left: 29%;
+    width: 120px;
+    height: 120px;
+    opacity: .7;
+}
+.smaller {
+    top: 41%;
+    left: 38%;
+    width: 90px;
+    height: 100px;
+    opacity: .9;
+}
+p {
+    font-size: 12px;
+    color: #8E9AAF;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 50% 0 20px;
+}
+button {
+    display: block;
+    font-size: 12px;
+    color: #d28893;
+    letter-spacing: 2px;
+    border: solid 1px #EAC7CC;
+    border-radius: 10px;
+    background: #f6f6f6;
+    padding: 12px;
+    margin: auto;
+    outline: none;
+}
+button:hover {
+    color: #f6f6f6;
+    background: #EAC7CC;
+    cursor: pointer;
+    transition: background 1s ease-out;
+}
+
+/* form styling */
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.intbox {
+    position: relative;
+}
+.intbox label {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 16px;
+    color: rgba(246, 246, 246, 1);
+    letter-spacing: 2px;
+    transition: top .5s ease;   
+}
+.intbox label.warning {
+    color: red !important;
+    animation: warning .3s ease;
+    animation-iteration-count: 3;
+}
+@keyframes warning {
+    0% {transform: translateX(-3px);}
+    25% {transform: translateX(3px);}
+    50% {transform: translateX(-3px);}
+    75% {transform: translateX(3px);}
+}
+.intbox input:focus {
+    border-bottom: 1px solid #d28893;
+    outline: none;
+    transition: .8s all ease;
+}
+.intbox input:focus + label, 
+.intbox input:valid + label {
+    font-size: 12px;
+    top: 0;
+}
+input {
+    font-size: 16px;
+    color: #d28893;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid rgba(246, 246, 246, 0.5);
+    background: transparent;
+    padding: 10px;
+    margin: 5px;
+}
+.checkbox {
+    position: relative;
+    left: -60px;
+    top: 5px;
+}
+input[type=checkbox] {
+    width: 7px;
+}
+label {
+    font-size: 12px;
+    color: #d28893;
+    letter-spacing: 1px;
+}
+.more-padding{
+    padding: 35px;
+}
+.submit {
+    margin-top: 25px;
+    padding: 12px;
+    border-color: #d28893;
+}
+.submit:hover {
+    background: #CBC0D3;
+    border-color: #cbbed5;
+}
+.check_msg1 {
+    display : none;
+	font-size: 14px;
+	color : #d28893;
+	padding-bottom: 5px;
+}
+.check_msg2 {
+    display : none;
+    font-size: 14px;
+	color : red;
+	padding-bottom: 5px;
+}
+.check_msg3 {
+    display : none;
+    font-size: 14px;
+	color : red;
+	padding-bottom: 5px;
+}
+.msg {
+    position: absolute;
+    right: 20px;
+    color: #d28893;
+    margin-top: 20px;
+}
